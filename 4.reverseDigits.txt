@@ -1,0 +1,18 @@
+class Solution
+{
+	public:
+		long long int reverse_digit(long long int n)
+		{   
+		    string nonzero;
+		    string s=to_string(n);
+		    int ind=s.size()-1;
+		    int i=0;
+		    while(i<s.length() && s[ind]=='0'){
+		        ind--;
+		    }
+		    nonzero=s.substr(0,ind+1);
+		    reverse(nonzero.begin(),nonzero.end());
+		    n=stoll(nonzero);
+		    return n;
+		}
+};

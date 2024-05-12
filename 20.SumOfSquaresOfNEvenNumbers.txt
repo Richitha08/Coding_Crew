@@ -1,0 +1,20 @@
+class Solution
+{
+	public:
+		long long int sum_of_square_evenNumbers(long long int n)
+		{   
+		    int count=1;
+		    int i=1;
+		    int x=1;
+		    int sum=0;
+		    while(i<=n){
+		        if(x%2==0){
+		            sum+=pow(x,2);
+		            i++;
+		        }
+		       x++;
+		    }
+		 return sum;   
+		}
+};
+

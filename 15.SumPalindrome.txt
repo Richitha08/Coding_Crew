@@ -1,0 +1,30 @@
+class Solution {
+  public:
+    long long isSumPalindrome(long long n){
+        int x=0;
+        int a;
+        while(x<5){
+            int temp=n;
+            int rev=0;
+            while(n!=0){
+                rev=rev*10+n%10;;
+                n=n/10;
+            }
+            a=temp+rev;
+            n=a;
+            rev=0;
+            while(n!=0){
+                rev=rev*10+n%10;;
+                n=n/10;
+            }
+             if (a==rev){
+                return a;
+            }
+            n=a;
+            x++;
+        }
+        return -1;
+    }
+};
+
+

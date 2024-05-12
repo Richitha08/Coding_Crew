@@ -1,0 +1,13 @@
+class Solution
+{
+public:
+    vector<int> getTable(int N)
+    {   
+        vector<int> myVect;
+        for(int i=1;i<=10;i++){
+            myVect.push_back(N*i);
+        }
+        return myVect;
+    }
+};
+
